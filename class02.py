@@ -22,3 +22,14 @@ sequencia = Sequencial()
 seqinterator = iter(sequencia)
 print(next(seqinterator))
 print(next(seqinterator))
+print(next(seqinterator))
+print(next(seqinterator))
+print(next(seqinterator))
+try:
+    print(next(seqinterator))
+    print(next(seqinterator))
+except StopIteration:
+    print("Erro StopIteration")
+else:
+    print("Outro erro")
+
