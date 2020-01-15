@@ -132,7 +132,7 @@ print(tupla)
 
 for cont in range (1,5):
     print("Pos{0} atual: ",format(cont) )
-"""
+
 
 
 valor = "*"
@@ -153,13 +153,12 @@ space = ""
 for s in range(0,5):
     space +=" "
 
-for nome in range(0,5):
-    if(nome % 2==0):
-        print(valor*nome)
-
+#for nome in range(0,5):
+#    if(nome % 2==0):
+#        print(valor*nome)
+iterador=0
 for i in range (5, 0, -1):
-    iterador=1
-    iterador = iterador+ i
+    iterador = iterador+ 1
     print (' '*i + '*'*iterador)
 
 # conjunto
@@ -174,3 +173,139 @@ print(conj)
 print(conjunto1 - conjunto2)
 
 print(conjunto1 ^ conjunto2)
+
+#class02
+#dicionario
+dict1 = {"produto" : "biscoito", "marca":"vitarella", "peso" : 90}
+
+for d in dict1:
+    print(d)
+
+for d in dict1:
+    print(dict1[d])
+
+#item pertence ao dicionario
+if "marca" in dict1:
+    print("tem marca")
+
+if "marcador" not in dict1:
+    print("nao tem marcador")
+
+for d in dict1.values():
+    print("valores dic: ",d)
+
+for d, v in dict1.items():
+    print("chaves e valores:",d,v)
+
+
+#acionando um item no dic
+dict1["embalagem"]="plastica"
+print(dict1)
+
+#remove o ult
+dict1.pop("embalagem")
+print(dict1)
+
+#substituicao do item adicionado
+dict1["embalagem"] ="plastica"
+dict1["embalagem"] ="tecido"
+print(dict1)
+
+
+#dict.popitem()
+#del dict1["embalagem"]
+#dict1.clear()
+print(dict1)
+
+
+#copy no dicionario
+
+dict2 = dict1
+dict3 = dict1.copy()
+
+print(dict3)
+
+aluno01 = {"matricula" : "2020001",
+           "nome" : "Matheus",
+           "idade" : 20 }
+
+aluno02 = {"matricula" : "2020002",
+           "nome" : "Tatiane",
+           "idade" : 30}
+
+aluno03 = {"matricula" : "2020003",
+           "nome" : "Andressa",
+           "idade" : 27 }
+
+
+matriculados = {"aluno01" : aluno01, "aluno02" : aluno02, "aluno03" :aluno03}
+
+
+print()
+for mats in matriculados:
+    print(matriculados[mats])
+    #print(matriculados)
+
+print()
+for matsKey, matsValue in matriculados.items():
+    print(matsKey, matsValue)
+    for mat, val in matsValue.items():
+        print(mat, val)
+
+
+
+# Declaring a None variable
+var = None
+
+if var is None: # Checking if the variable is None
+  print("None")
+else:
+  print("Not None")
+
+  """
+# function
+def fatorial(n):
+    pass
+
+
+def mediaPonderada(*n):
+    media =0
+    quant =0
+    for x in n:
+        media = media +x
+        qnt = qnt+1
+    return media / quant
+
+#Passando chaves como parametros
+def carros(**car):
+    print ("O carro eh: ", car["gm"], "o outro eh: ", car["fiat"])
+
+carros(gm = "Onix", fiat="Uno")
+
+x = lambda a, b: (a *b)
+print("Multiplicacao com Lambda", x(6,5))
+
+def soma(a, b):
+    return a+b
+
+def subtracao(a, b):
+    return a-b
+
+def multiplicacao(a, b):
+    return a*b
+
+def divisao(a, b):
+    return a/b
+
+def raizQuadrada(raiz):
+    return raiz ** (1/2)
+
+def main():
+    print(soma(1,1))
+    print(subtracao(1, 1))
+    print(multiplicacao(1, 1))
+    print("Div",divisao(1, 1))
+    print("Raiz %d" % raizQuadrada(625))
+
+if __name__ == "__main__":
+    main()
